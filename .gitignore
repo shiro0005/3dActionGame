@@ -58,3 +58,23 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+#tuika
+
+Library/
+Logs/
+UserSettings/
+<<<<<<< HEAD
+3DAction/.vsconfig
+3DAction/obj
+
+=======
+obj/
+.vsconfig
+>>>>>>> main
+3DAction/UpgradeLog.htm
+Temp/
+3DAction/Assets/Effekseer.meta
+3DAction/Assets/Effekseer/Plugins.meta
+3DAction/Assets/Effekseer/Plugins/x86_64.meta
+3DAction/Assets/Effekseer/Plugins/x86_64/EffekseerUnity.dll
+3DAction/Assets/Effekseer/Plugins/x86_64/EffekseerUnity.dll.meta
