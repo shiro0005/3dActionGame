@@ -697,7 +697,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 31.38
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -706,7 +706,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 41.85463
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -731,8 +731,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.56, y: 0.06, z: -14.71}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5600014, y: 0.059999943, z: -26.800001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1333,7 +1333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf821293d68df714c944bb5d3e114634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player_Speed: 5
+  Player_Speed: 15
 --- !u!54 &5553737050926942073
 Rigidbody:
   m_ObjectHideFlags: 0

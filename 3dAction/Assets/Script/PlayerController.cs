@@ -22,15 +22,26 @@ public class PlayerController : MonoBehaviour
         moveX = Input.GetAxis("Horizontal") * Player_Speed;
         moveZ = Input.GetAxis("Vertical") * Player_Speed;
         Vector3 direction = new Vector3(moveX, 0, moveZ);
-        if (moveX != 0f || moveZ != 0f)
+        Vector3 force = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (direction.magnitude<0.1f)
         {
-            animator.SetBool("Run", true);
-            rb.velocity = new Vector3(moveX, 0, moveZ);
+            //Debug.Log(Input.GetAxis("Horizontal"));
+            animator.SetBool("Run", false);
         }
         else
         {
-            animator.SetBool("Run", false);
-            rb.velocity = new Vector3(moveX, 0, moveZ);
+            animator.SetBool("Run", true);
         }
+        //if (moveX != 0f || moveZ != 0f)
+        //{
+            transform.LookAt(transform.position + direction);
+            
+            rb.velocity = direction;
+        //}
+        //else
+        //{
+        //    animator.SetBool("Run", false);
+        //    rb.velocity = direction;
+        //}
     }
 }
