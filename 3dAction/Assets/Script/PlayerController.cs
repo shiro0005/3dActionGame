@@ -21,27 +21,30 @@ public class PlayerController : MonoBehaviour
     {
         moveX = Input.GetAxis("Horizontal") * Player_Speed;
         moveZ = Input.GetAxis("Vertical") * Player_Speed;
+        //移動量
         Vector3 direction = new Vector3(moveX, 0, moveZ);
-        Vector3 force = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        if (direction.magnitude<0.1f)
+
+        if (direction.magnitude < 0.1f)
         {
-            //Debug.Log(Input.GetAxis("Horizontal"));
-            animator.SetBool("Run", false);
+            animator.SetBool("Run", false);//アニメーション切り替え
         }
         else
         {
             animator.SetBool("Run", true);
         }
-        //if (moveX != 0f || moveZ != 0f)
-        //{
-            transform.LookAt(transform.position + direction);
-            
-            rb.velocity = direction;
-        //}
-        //else
-        //{
-        //    animator.SetBool("Run", false);
-        //    rb.velocity = direction;
-        //}
+
+        transform.LookAt(transform.position + direction);//キャラクター向き調整
+
+        rb.velocity = direction;//キャラクター移動
+
+        if (Input.GetButtonDown("Fire3"))
+        {
+            animator.SetBool("Attack", true);
+        }
+        else
+        {
+            animator.SetBool("Attack", false);
+        }
+
     }
 }
